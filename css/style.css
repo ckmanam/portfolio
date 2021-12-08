@@ -1,0 +1,317 @@
+* , #main{
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+h1{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+p{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.landingheader, .contactheader{
+    font-size: 40px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.tokyoheader{
+    font-size: 40px;
+    text-align: center;
+    background-color: tomato;
+    
+}
+
+.alaskaheader{
+    font-size: 40px;
+    text-align: center;
+    background-color: skyblue;
+
+}
+
+.europeheader{
+    font-size: 40px;
+    text-align: center;
+    background-color:lightgreen;
+
+}
+
+.imgset{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 15px;
+    
+}
+
+.tokyoset > img{
+    border: 3px solid tomato;
+    height: auto;
+}
+
+.alaskaset > img{
+    border: 3px solid skyblue;
+    height: auto;
+}
+
+.europeset > img{
+    border: 3px solid lightgreen;
+    height: auto;
+}
+
+
+.navigation{
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+a {
+    color: inherit;
+}
+
+a:link, a:visited {
+    color: black;
+  }
+  
+a.current0:link, a.current0:visited {
+color: black;
+background-color:lightgray;
+border-radius: 5px;
+text-transform: uppercase;
+}
+a.current1:link, a.current1:visited {
+color: black;
+background-color:tomato;
+border-radius: 5px;
+text-transform: uppercase;
+}
+
+a.current2:link, a.current2:visited {
+    color: black;
+    background-color:lightgreen;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+a.current3:link, a.current3:visited {
+    color: black;
+    background-color:skyblue;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+a.current4:link, a.current4:visited {
+    color: black;
+    background-color:lightgray;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+figcaption{
+    text-align: center;
+}
+
+.indexset > img{
+    border-left: 10px;
+    border-right: 10px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.tokyoheader , .europeheader, .alaskaheader, .landingheader, .contactheader{
+    animation-name: logos;
+    animation-duration: 5s;
+}
+@keyframes logos {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+
+
+@media screen and (min-width: 750px){
+
+.tokyoset{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.europeset{
+    display: flex;
+    flex-wrap: wrap
+}
+
+.alaskaset{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.indexset{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.navigation{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.landinggrid{
+    grid-column: 1 / span 2;
+}
+
+.tokyogrid{
+    grid-column: 3 / span 2;
+}
+
+.europegrid{
+    grid-column: 5 / span 2;
+}
+
+.alaskagrid{
+    grid-column: 1 / span 3;
+}
+
+.contactgrid{
+    grid-column: 4 / span 3;
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:10px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+.parallax{
+    background-image: url('../googleimgs/travelcartoon.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.card {
+    perspective: 500px;
+}
+
+.content {
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+}
+.card:focus .content{
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+}
+
+.front,
+.back {
+  background: white;
+  /* line-height: 300px; */
+  color: #03446A;
+  text-align: center;
+  font-size: 60px;
+  backface-visibility: hidden;
+}
+
+.back {
+    background: #03446A;
+    color: white;
+    transform: rotateY( 180deg );
+
+}
+
+
+@media (prefers-reduced-motion) {
+
+.tokyoheader , .europeheader, .alaskaheader, .landingheader, .contactheader{
+    animation-name: dissolve;
+    }
+.parallax{
+    background-attachment: scroll;
+    }
+.card:hover .content {
+    transform: rotateY( 0deg ) ;
+    }
+.card:focus .content{
+    transform: rotateY( 0deg ) ;
+    }
+.back {
+    transform: rotateY( 0deg );
+    }  
+}
+
+}
+
+@media screen and (min-width: 950px){
+
+.navigation{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.landinggrid, .tokyogrid, .europegrid, .alaskagrid, .contactgrid{
+    grid-column: auto;
+} 
+
+
+
+}
